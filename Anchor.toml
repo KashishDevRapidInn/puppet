@@ -1,0 +1,19 @@
+[toolchain]
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.devnet]
+puppet = "EBaZxADBDyAKJjq9SGLLiAwyf4SjCHbiw7vdYgtLg6GQ"
+puppet_master = "B5T18uMD585s3zJyfpAASN6VDsjAAeyXipyyP36odR21"
+
+[registry]
+url = "https://api.apr.dev" 
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
